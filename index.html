@@ -59,7 +59,7 @@
 <body class="preload">
 <div class="container">
 
-	<h1>Remington Breeze</h1>
+	<h1><a class="main-link" target="_blank" href="http://twitter.com/remingtonbreeze">Remington Breeze</a></h1>
 
 	<pre><code class="language-javascript">var remington = ['student', 'athlete', 'developer'];</code></pre>
 
@@ -179,7 +179,7 @@ $(function(){
 
 	$('.student').click(function() {
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
@@ -191,17 +191,17 @@ $(function(){
 		$('.button.contact').animate({'margin-top' : '64px'}, 300);
 		$('.terminal-container').css({ 'z-index' : '10' });
 		$('.terminal .text').typed({
-			strings: ["echo transcript"],
+			strings: ["echo academics"],
 			typeSpeed: 75,
 			backSpeed: 25,
 			startDelay: 1900,
 			backDelay: 500, 
 			callback: function() {
-				$('.terminal').delay(350).animate({'height' : 190});
-				$('.button.contact').delay(200).animate({'margin-top' : 205}, function() {
+				$('.terminal').delay(350).animate({'height' : 285});
+				$('.button.contact').delay(200).animate({'margin-top' : 305, 'margin-bottom' : 25}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('AP Calculus AB : 93% <br>AP US History: 90.2% <br>Principles of Engineering : 91% <br>AP English 11 : 86% <br>French 3 : 92% ');
+						$(".terminal .text").append('Cummulative Weighted GPA: 4.16 <br> Courses Completed: <br> AP Calculus AB/BC <br> AP World History <br> AP US History <br> Newspaper (Editor in Chief) <br> Orchestra (Section Leader) <br> AP English 11/12 <br> 2 years Engineering');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
@@ -215,7 +215,7 @@ $(function(){
 	$('.athlete').click(function() {
 		$('.red.circle').prop('disabled', true);
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
@@ -233,11 +233,11 @@ $(function(){
 			startDelay: 1900,
 			backDelay: 500, 
 			callback: function() {
-				$('.terminal').delay(350).animate({'height' : 240});
-				$('.button.contact').delay(200).animate({'margin-top' : 265}, function() {
+				$('.terminal').delay(350).animate({'height' : 270});
+				$('.button.contact').delay(200).animate({'margin-top' : 285}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('3200 meters : 9:24 <br>1600 meters : 4:37 <br>800 meters : 2:08 <br>Woodward Park : 16:30 <br>Mount Sac : 17:34 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a>');
+						$(".terminal .text").append('3200 meters : 9:24 <br>1600 meters : 4:25 <br>800 meters : 2:01.94 <br>Woodward Park : 15:50 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a> <br> Health log available here: <br><a href="http://rbreeze.github.io/dashboard" target="_blank">rbreeze.github.io/dashboard</a>');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
@@ -251,7 +251,7 @@ $(function(){
 	$('.developer').click(function() {
 		$('.red.circle').prop('disabled', true);
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
