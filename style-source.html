@@ -18,6 +18,22 @@
 
 */
 
+@font-face {
+	src: url('avenirnext.otf');
+	font-family: 'Avenir Next';
+	font-weight: 500;
+}
+
+@font-face {
+	src: url('helveticaneue.dfont');
+	font-family: 'Helvetica Neue';
+}
+
+@font-face {
+	src: url('andalemxono.ttf');
+	font-family: 'Andale Mono';
+}
+
 body, html {
 	margin: 0; padding: 0;
 }
@@ -48,7 +64,7 @@ body {
 
 .container {
 
-	padding-top: 10px;
+	padding-top: 25px;
 
 	display: block;
 	margin: 0 auto;
@@ -67,6 +83,10 @@ h1, h2, h3 {
 h1 {
 	font-size: 43px;
 	margin-bottom: 13px;
+	a.main-link {
+		text-decoration: none;
+		color: #000;
+	}
 }
 
 .caps {
@@ -84,20 +104,23 @@ p {
 pre {
 	display: block;
 	margin: 0 auto;
-	margin-top: 19px;
+	margin-top: 21px;
 	margin-bottom: 27px;
 	width: 520px;
-	box-shadow: 0px 2px 0px 0px #bababa;
 	@media (max-width: 620px) {
 		width: 80%;
 	}
+}
+
+xmp {
+	font-family: 'Monaco';
 }
 
 .student, .athlete, .developer, .circle {
 	cursor: pointer;
 }
 
-@terminal-width: 430px;
+@terminal-width: 500px;
 @terminal-height: 39px;
 @top-bar-height: 23px;
 
@@ -113,7 +136,7 @@ pre {
 		display: none;
 		background: #000;
 		position: absolute;
-		width: @terminal-width;
+		width: @terminal-width - 30;
 		font-family: 'Andale Mono';
 		color: #3BFC31;
 		border-radius: 10px 10px 5px 5px;
@@ -139,7 +162,7 @@ pre {
 	display: none;
 	position: absolute;
 	border-radius: 5px 5px 0px 0px;
-	width: @terminal-width+30;
+	width: @terminal-width;
 	top: 0px;
 	left: 1px;
 	margin: 0 auto;
@@ -246,6 +269,7 @@ pre {
 }
 
 .button.contact {
+	display: none;
 	margin-top: -1 * (@terminal-height + 25);
 }
 
@@ -285,6 +309,7 @@ form.contact {
 		font-family: 'Avenir Next';
 	}
 }
+
 
 </xmp>
 

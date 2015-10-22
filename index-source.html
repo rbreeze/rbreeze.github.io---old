@@ -68,7 +68,7 @@
 <body class="preload">
 <div class="container">
 
-	<h1>Remington Breeze</h1>
+	<h1><a class="main-link" target="_blank" href="http://twitter.com/remingtonbreeze">Remington Breeze</a></h1>
 
 	<pre><code class="language-javascript">var remington = ['student', 'athlete', 'developer'];</code></pre>
 
@@ -89,7 +89,7 @@
 
 	</div>
 	<div class="button contact"><span class="inner">Contact</span></div>
-		<form class="contact" method="POST">
+		<form class="contact" method="POST" action="http://formspree.io/remington.breeze@gmail.com">
 		<input type="text" name="name" placeholder="Name">
 		<input type="text" name="email" placeholder="Email">
 		<input type="text" name="message" placeholder="Message">
@@ -158,37 +158,37 @@ $(function(){
 		else $('.button.submit').fadeIn(500);
 	});
 
-	$('form').submit(function(e){
-		e.preventDefault();
-	});
-
 	$("span:contains('student')").addClass('student');
 	$("span:contains('athlete')").addClass('athlete');
 	$("span:contains('developer')").addClass('developer');
 
 	var width = 430;
 
+	var revertColor = "#a6e22e";
+
 	$('.student').hover(function(){
-		$(this).animate({color : '#f30b16'}, 250);
+		$(this).animate({color : '#ff3b72'}, 250);
 	}, function() {
-		$(this).animate({color : '#a445e0'});
+		$(this).animate({color : revertColor});
 	});
 
 	$('.athlete').hover(function(){
-		$(this).animate({color : '#21c96f'}, 250);
+		$(this).animate({color : '#ffd800'}, 250);
 	}, function() {
-		$(this).animate({color : '#a445e0'});
+		$(this).animate({color : revertColor});
 	});
 
 	$('.developer').hover(function(){
-		$(this).animate({color : '#0f28e9'}, 250);
+		$(this).animate({color : '#06c9e9'}, 250);
 	}, function() {
-		$(this).animate({color : '#a445e0'});
+		$(this).animate({color : revertColor});
 	});
+
+	var isAnimating = false;
 
 	$('.student').click(function() {
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
@@ -200,29 +200,31 @@ $(function(){
 		$('.button.contact').animate({'margin-top' : '64px'}, 300);
 		$('.terminal-container').css({ 'z-index' : '10' });
 		$('.terminal .text').typed({
-			strings: ["echo transcript"],
+			strings: ["echo academics"],
 			typeSpeed: 75,
 			backSpeed: 25,
 			startDelay: 1900,
 			backDelay: 500, 
 			callback: function() {
-				$('.terminal').delay(350).animate({'height' : 190});
-				$('.button.contact').delay(200).animate({'margin-top' : 210}, function() {
+				$('.terminal').delay(350).animate({'height' : 285});
+				$('.button.contact').delay(200).animate({'margin-top' : 305, 'margin-bottom' : 25}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('AP Calculus AB : 93% <br>AP US History: 90.2% <br>Principles of Engineering : 91% <br>AP English 11 : 86% <br>French 3 : 92% ');
+						$(".terminal .text").append('Cummulative Weighted GPA: 4.16 <br> Courses Completed: <br> AP Calculus AB/BC <br> AP World History <br> AP US History <br> Newspaper (Editor in Chief) <br> Orchestra (Section Leader) <br> AP English 11/12 <br> 2 years Engineering');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
 					}, 2400);
 				});
 			}
-		});	
+		});
+		$(".button.contact").delay(4500).fadeIn();	
 	});	
 
 	$('.athlete').click(function() {
+		$('.red.circle').prop('disabled', true);
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
@@ -240,11 +242,11 @@ $(function(){
 			startDelay: 1900,
 			backDelay: 500, 
 			callback: function() {
-				$('.terminal').delay(350).animate({'height' : 190});
-				$('.button.contact').delay(200).animate({'margin-top' : 210}, function() {
+				$('.terminal').delay(350).animate({'height' : 270});
+				$('.button.contact').delay(200).animate({'margin-top' : 285}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('3200 meters : 9:24 <br>1600 meters : 4:37 <br>800 meters : 2:08 <br>Woodward Park : 16:30 <br>Mount Sac : 17:34 ');
+						$(".terminal .text").append('3200 meters : 9:24 <br>1600 meters : 4:25 <br>800 meters : 2:01.94 <br>Woodward Park : 15:50 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a> <br> Health log available here: <br><a href="http://rbreeze.github.io/dashboard" target="_blank">rbreeze.github.io/dashboard</a>');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
@@ -252,11 +254,13 @@ $(function(){
 				});
 			}
 		});
+		$(".button.contact").delay(4500).fadeIn();	
 	});
 
 	$('.developer').click(function() {
+		$('.red.circle').prop('disabled', true);
 		$('.terminal').empty();
-		$('.terminal').append(
+		$('.terminal').html(
 			"<span class='text'>computer:~$ </span>"
 		);
 		$('.terminal').animate({
@@ -275,10 +279,10 @@ $(function(){
 			backDelay: 500, 
 			callback: function() {
 				$('.terminal').delay(350).animate({'height' : 115});
-				$('.button.contact').delay(200).animate({'margin-top' : 145}, function() {
+				$('.button.contact').delay(200).animate({'margin-top' : 140}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('index.html available here : <a href="">http://link.com</a><br>style.less available here : <a href="#">http://link.com</a>');
+						$(".terminal .text").append('index.html available here : <a href="index-source.html" target="_blank">View Source</a><br>style.less available here : <a href="style-source.html" target="_blank">View Source</a>');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
@@ -286,6 +290,7 @@ $(function(){
 				});
 			}
 		});
+		$(".button.contact").delay(6500).fadeIn();	
 	});
 
 	$('.red.circle').click(function() {
@@ -296,8 +301,10 @@ $(function(){
 		$('.terminal-container .top-bar').delay(750).fadeOut();
 		$('.terminal').css('overflow', 'visible');
 		$('.button.contact').delay(900).animate({'margin-top' : '-64px'}, 300);
-		$('.terminal-container').css({ 'z-index' : '-10' })
+		$('.terminal-container').css({ 'z-index' : '-10' });
 		$('.terminal').animate({'height' : 39});
+		$('.button.contact').animate({'margin-top' : '-64px'}, 300);
+		$('.button.contact').fadeOut();
 	});
 
 });
