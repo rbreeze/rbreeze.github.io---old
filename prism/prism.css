@@ -4,11 +4,6 @@
  * @author Lea Verou
  */
 
-@font-face {
-    src: url('fonts/monaco.ttf');
-    font-family: 'Monaco';
-}
-
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript */
 /**
  * okaidia theme for JavaScript, CSS and HTML
