@@ -1,19 +1,19 @@
-<!--                                                      
-	                                             
-	┌──────────────────────────────────────────┐  
-	│ ┌──────────────────────────────────────┐ │  
-	│ │    This site was coded with <3 by    │ │  
-	│ │           Remington Breeze           │ │  
-	│ └──────────────────────────────────────┘ │  
-	└──────────────────────────────────────────┘  
-	                     │                       
-	         ┌───────────┘                       
-	         ▼                                   
-	 ┌───────────────┐                           
-	 │ ┌───────────┐ │                           
-	 │ │Fluent in :│ │─┐  ┌────────────────┐     
-	 │ └───────────┘ │ └─▶│  Objective C   │──┐  
-	 └───────────────┘    └────────────────┘  │  
+<!--
+
+	┌──────────────────────────────────────────┐
+	│ ┌──────────────────────────────────────┐ │
+	│ │    This site was coded with <3 by    │ │
+	│ │           Remington Breeze           │ │
+	│ └──────────────────────────────────────┘ │
+	└──────────────────────────────────────────┘
+	                     │
+	         ┌───────────┘
+	         ▼
+	 ┌───────────────┐
+	 │ ┌───────────┐ │
+	 │ │Fluent in :│ │─┐  ┌────────────────┐
+	 │ └───────────┘ │ └─▶│  Objective C   │──┐
+	 └───────────────┘    └────────────────┘  │
 	         │        ┌───┐                   ──┐
 	         ▼        │ C │◀┐  ┌─────────┐    │ │
 	     ┌──────┐     └───┘ └──│  Swift  │◀───┘ │
@@ -21,25 +21,25 @@
 	  │  └──────┘          ▼         ┌──────────┐
 	  │             ┌────────────┐   │  Python  │
 	  │  ┌─────┐    │ CSS / LESS │   └──────────┘
-	  └─▶│ PHP │─┐  └────────────┘               
-	     └─────┘ ──────┐      ┌───────┐          
-	             ▼     └─────▶│ MySQL │          
-	    ┌─────────────────┐   └───────┘          
-	    │  Javascript /   │                      
-	    │     Jquery      │                      
-	    └─────────────────┘                      
-	             │                               
-	             └───────────┐                   
-	                         ▼                   
-	      ┌────────────────────────────────────┐ 
-	      │  ┌──────────────────────────────┐  │ 
-	      │  │   Over 5 years experience    │  │ 
-	      │  │     developing websites      │  │ 
-	      │  └──────────────────────────────┘  │ 
+	  └─▶│ PHP │─┐  └────────────┘
+	     └─────┘ ──────┐      ┌───────┐
+	             ▼     └─────▶│ MySQL │
+	    ┌─────────────────┐   └───────┘
+	    │  Javascript /   │
+	    │     Jquery      │
+	    └─────────────────┘
+	             │
+	             └───────────┐
+	                         ▼
+	      ┌────────────────────────────────────┐
+	      │  ┌──────────────────────────────┐  │
+	      │  │   Over 5 years experience    │  │
+	      │  │     developing websites      │  │
+	      │  └──────────────────────────────┘  │
 	      └────────────────────────────────────┘  -->
 
 
-<!-- 
+<!--
 *
 * BEAUTY ON THE INSIDE IS MORE IMPORTANT THAN BEAUTY ON THE OUTSIDE.
 *
@@ -59,7 +59,7 @@
 <body class="preload">
 <div class="container">
 
-	<h1><a class="main-link" target="_blank" href="http://twitter.com/remingtonbreeze">Remington Breeze</a></h1>
+	<h1><a class="main-link" target="_blank" href="http://instagram.com/rbreeze3">Remington Breeze</a></h1>
 
 	<pre><code class="language-javascript">var remington = ['student', 'athlete', 'developer'];</code></pre>
 
@@ -115,7 +115,7 @@ $("window").load(function() {
 
 $(function(){
 	jQuery('.button.contact').animate({
-			backgroundColor: "#DBF6FD", 
+			backgroundColor: "#DBF6FD",
 			borderBottomColor: "#8DD2FF"
 	}, 750);
 	$('.button.contact').clickToggle(function(){
@@ -133,7 +133,7 @@ $(function(){
 		$('form.contact').fadeOut(500);
 		$(this).removeClass('inactive');
 		jQuery(this).animate({
-			backgroundColor: "#DBF6FD", 
+			backgroundColor: "#DBF6FD",
 			borderBottomColor: "#8DD2FF"
 		}, 750);
 		$('.button .inner').fadeOut(function(){ $(this).html('Contact')}).fadeIn();
@@ -145,7 +145,7 @@ $(function(){
 			if ($('input').val() == "") {
 				$('.button.submit').fadeOut(500);
 			}
-		} 
+		}
 		else $('.button.submit').fadeIn(500);
 	});
 
@@ -195,7 +195,7 @@ $(function(){
 			typeSpeed: 75,
 			backSpeed: 25,
 			startDelay: 1900,
-			backDelay: 500, 
+			backDelay: 500,
 			callback: function() {
 				$('.terminal').delay(350).animate({'height' : 285});
 				$('.button.contact').delay(200).animate({'margin-top' : 305, 'margin-bottom' : 25}, function() {
@@ -209,8 +209,8 @@ $(function(){
 				});
 			}
 		});
-		$(".button.contact").delay(4500).fadeIn();	
-	});	
+		$(".button.contact").delay(4500).fadeIn();
+	});
 
 	$('.athlete').click(function() {
 		$('.red.circle').prop('disabled', true);
@@ -231,13 +231,13 @@ $(function(){
 			typeSpeed: 75,
 			backSpeed: 25,
 			startDelay: 1900,
-			backDelay: 500, 
+			backDelay: 500,
 			callback: function() {
 				$('.terminal').delay(350).animate({'height' : 270});
 				$('.button.contact').delay(200).animate({'margin-top' : 285}, function() {
 					$('.terminal .text').append('<br>');
 					setTimeout(function() {
-						$(".terminal .text").append('3200 meters : 9:21 <br>1600 meters : 4:25 <br>800 meters : 2:01.94 <br>Woodward Park : 15:31 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a> <br> Health log available here: <br><a href="http://rbreeze.github.io/dashboard" target="_blank">rbreeze.github.io/dashboard</a>');
+						$(".terminal .text").append('5000 meters : 15:03 <br> 3200 meters : 9:21 <br>1600 meters : 4:25 <br>800 meters : 2:01.94 <br>Woodward Park : 15:31 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a> <br> Health log available here: <br><a href="http://rbreeze.github.io/dashboard" target="_blank">rbreeze.github.io/dashboard</a>');
 					}, 1500);
 					setTimeout(function() {
 						$('.terminal .text').append("<br>computer:~$ ");
@@ -245,7 +245,7 @@ $(function(){
 				});
 			}
 		});
-		$(".button.contact").delay(4500).fadeIn();	
+		$(".button.contact").delay(4500).fadeIn();
 	});
 
 	$('.developer').click(function() {
@@ -267,7 +267,7 @@ $(function(){
 			typeSpeed: 75,
 			backSpeed: 25,
 			startDelay: 1900,
-			backDelay: 500, 
+			backDelay: 500,
 			callback: function() {
 				$('.terminal').delay(350).animate({'height' : 115});
 				$('.button.contact').delay(200).animate({'margin-top' : 140}, function() {
@@ -281,7 +281,7 @@ $(function(){
 				});
 			}
 		});
-		$(".button.contact").delay(6500).fadeIn();	
+		$(".button.contact").delay(6500).fadeIn();
 	});
 
 	$('.red.circle').click(function() {
